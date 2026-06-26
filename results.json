@@ -9,6 +9,15 @@
       500
     ]
   },
-  "test_prepare_data": "TypeError(\"'NoneType' object is not subscriptable\")\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1410/4251730954.py\", line 59, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1410/4251730954.py\", line 24, in test_prepare_data\n    'dev_texts_shape': dev_sequences[\"texts\"][\"input_ids\"].shape,\n                       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not subscriptable\n",
-  "test_model": "NameError(\"name 'load_model' is not defined\")\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1410/4251730954.py\", line 59, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1410/4251730954.py\", line 36, in test_model\n    model = load_model(model_name, tag2id)\n            ^^^^^^^^^^\nNameError: name 'load_model' is not defined. Did you mean: 'train_model'?\n"
+  "test_prepare_data": {
+    "dev_texts_shape": [
+      250,
+      128
+    ],
+    "train_labels_shape": [
+      1750,
+      128
+    ]
+  },
+  "test_model": "TypeError(\"train_model() missing 1 required positional argument: 'lr'\")\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1719/4251730954.py\", line 59, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1719/4251730954.py\", line 39, in test_model\n    trainer = train_model(model, N_EPOCHS, BATCH_SIZE, train_ds, dev_ds)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: train_model() missing 1 required positional argument: 'lr'\n"
 }

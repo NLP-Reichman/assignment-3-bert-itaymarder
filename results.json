@@ -19,5 +19,8 @@
       128
     ]
   },
-  "test_model": "TypeError(\"'<=' not supported between instances of 'float' and 'str'\")\nTraceback (most recent call last):\n  File \"/tmp/ipykernel_1719/3168248888.py\", line 59, in <cell line: 0>\n    cur_res = test()\n              ^^^^^^\n  File \"/tmp/ipykernel_1719/3168248888.py\", line 39, in test_model\n    trainer = train_model(model, N_EPOCHS, BATCH_SIZE, train_ds, dev_ds, \"5e-5\")\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_1719/107605101.py\", line 34, in train_model\n    trainer.train()\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/trainer.py\", line 1433, in train\n    return inner_training_loop(\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/trainer.py\", line 1472, in _inner_training_loop\n    model, train_dataloader = self._prepare_for_training(max_steps, train_dataloader, resume_from_checkpoint)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/trainer.py\", line 1582, in _prepare_for_training\n    self.create_optimizer()\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/trainer.py\", line 1207, in create_optimizer\n    self.optimizer = optimizer_cls(optimizer_grouped_parameters, **optimizer_kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/torch/optim/adamw.py\", line 36, in __init__\n    super().__init__(\n  File \"/usr/local/lib/python3.12/dist-packages/torch/optim/adam.py\", line 58, in __init__\n    if not 0.0 <= lr:\n           ^^^^^^^^^\nTypeError: '<=' not supported between instances of 'float' and 'str'\n"
+  "test_model": {
+    "f1": 0.985078415072677,
+    "f1_wo_o": 0.9529008112813673
+  }
 }
